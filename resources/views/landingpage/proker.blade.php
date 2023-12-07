@@ -1,5 +1,9 @@
-@extends('landingpage.index')
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @include('landingpage.header')
+</head>
 
 <body class="d-flex flex-column h-100 bg-light">
     <main class="flex-shrink-0">
@@ -20,7 +24,7 @@
                             <!-- Note: Set the link href target to a PDF file within your project-->
                             <a class="btn btn-primary px-4 py-3" href="#!">
                                 <div class="d-inline-block bi bi-download me-2"></div>
-                                Download Proker
+                                Download Resume
                             </a>
                         </div>
                         <!-- Experience Card 1-->
@@ -182,4 +186,12 @@
             </div>
         </div>
     </main>
-    @endsection
+    <!-- Footer-->
+    @include('landingpage.footer')
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

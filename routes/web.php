@@ -16,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('landingpage.index');
 });
+Route::get('/home', function () {
+    return view('landingpage.index');
+});
 Route::get('/programkerja', function () {
     return view('landingpage.proker');
+});
+Route::get('/visimisi', function () {
+    return view('landingpage.visimisi');
+});
+Route::get('/kegiatan', function () {
+    return view('landingpage.kegiatan');
 });

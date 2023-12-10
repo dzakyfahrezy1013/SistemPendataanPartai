@@ -28,3 +28,11 @@ Route::get('/visimisi', function () {
 Route::get('/kegiatan', function () {
     return view('landingpage.kegiatan');
 });
+
+/* ----- ROUTE USER ------- */
+Route::get('/dashboard', function () {
+    return view('user.index');
+});
+Route::get('/userprofile', function () {
+    return view('user.profile');
+});

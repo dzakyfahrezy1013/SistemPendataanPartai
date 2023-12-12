@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* -------- ROUTE LANDING PAGE ----- */
+
 Route::get('/', function () {
     return view('landingpage.index');
 });
@@ -29,7 +31,10 @@ Route::get('/kegiatan', function () {
     return view('landingpage.kegiatan');
 });
 
-/* ----- ROUTE USER ------- */
+/* -------- ROUTE USER ----- */
+Route::get('/login', function () {
+    return view('user.login');
+});
 Route::get('/dashboard', function () {
     return view('user.index');
 });

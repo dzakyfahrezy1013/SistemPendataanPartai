@@ -77,17 +77,7 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../assets/images/users/profile.png" alt="user" class="rounded-circle" width="31">
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i>
-                                    My Profile</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i>
-                                    My Balance</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i>
-                                    Inbox</a>
-                            </ul>
+                            @include('user.userprofile')
                         </li>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
@@ -130,10 +120,10 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb mb-0 d-flex align-items-center">
                                 <li class="breadcrumb-item"><a href="index.html" class="link"><i class="mdi mdi-home-outline fs-4"></i></a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Basic Table</li>
+                                <li class="breadcrumb-item active" aria-current="page">Input Anggota</li>
                             </ol>
                         </nav>
-                        <h1 class="mb-0 fw-bold">Basic Table</h1>
+                        <h1 class="mb-0 fw-bold">Input Anggota</h1>
                     </div>
                     <div class="col-6">
                         <div class="text-end upgrade-btn">
@@ -152,86 +142,67 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
-                    <div class="wrapper wrapper--w680">
-                        <div class="card card-4">
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-8">
+                        <div class="card">
                             <div class="card-body">
-                                <h2 class="title">Registration Form</h2>
-                                <form method="POST">
-                                    <div class="row row-space">
-                                        <div class="col-2">
-                                            <div class="input-group">
-                                                <label class="label">first name</label>
-                                                <input class="input--style-4" type="text" name="first_name">
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="input-group">
-                                                <label class="label">last name</label>
-                                                <input class="input--style-4" type="text" name="last_name">
-                                            </div>
+                                <form class="form-horizontal form-material mx-2">
+                                    <div class="form-group">
+                                        <label class="col-md-12">NO. KK</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Masukan Nomor KK" class="form-control form-control-line">
                                         </div>
                                     </div>
-                                    <div class="row row-space">
-                                        <div class="col-2">
-                                            <div class="input-group">
-                                                <label class="label">Birthday</label>
-                                                <div class="input-group-icon">
-                                                    <input class="input--style-4 js-datepicker" type="text" name="birthday">
-                                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="input-group">
-                                                <label class="label">Gender</label>
-                                                <div class="p-t-10">
-                                                    <label class="radio-container m-r-45">Male
-                                                        <input type="radio" checked="checked" name="gender">
-                                                        <span class="checkmark"></span>
-                                                    </label>
-                                                    <label class="radio-container">Female
-                                                        <input type="radio" name="gender">
-                                                        <span class="checkmark"></span>
-                                                    </label>
-                                                </div>
-                                            </div>
+                                    <div class="form-group">
+                                        <label for="example-email" class="col-md-12">NIK</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Masukan Nomor KTP" class="form-control form-control-line" name="example-email" id="example-email">
                                         </div>
                                     </div>
-                                    <div class="row row-space">
-                                        <div class="col-2">
-                                            <div class="input-group">
-                                                <label class="label">Email</label>
-                                                <input class="input--style-4" type="email" name="email">
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="input-group">
-                                                <label class="label">Phone Number</label>
-                                                <input class="input--style-4" type="text" name="phone">
-                                            </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Nama Lengkap</label>
+                                        <div class="col-md-12">
+                                            <input type="text" value="Masukan Nama Lengkap" class="form-control form-control-line">
                                         </div>
                                     </div>
-                                    <div class="input-group">
-                                        <label class="label">Subject</label>
-                                        <div class="rs-select2 js-select-simple select--no-search">
-                                            <select name="subject">
-                                                <option disabled="disabled" selected="selected">Choose option</option>
-                                                <option>Subject 1</option>
-                                                <option>Subject 2</option>
-                                                <option>Subject 3</option>
+                                    <div class="form-group">
+                                        <label class="col-md-12">No HP</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="123 456 7890" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Alamat</label>
+                                        <div class="col-md-12">
+                                            <textarea rows="5" placeholder="Masukan Alamat Lengkap" class="form-control form-control-line"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-12">Kecamatan</label>
+                                        <div class="col-sm-12">
+                                            <select class="form-select shadow-none form-control-line">
+                                                <option>Purwokerto Timur</option>
+                                                <option>Purwokerto Barat</option>
+                                                <option>Purwokerto Utara</option>
+                                                <option>Purwokerto Selatan</option>
+                                                <option>Baturraden</option>
                                             </select>
-                                            <div class="select-dropdown"></div>
                                         </div>
                                     </div>
-                                    <div class="p-t-15">
-                                        <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success text-white">Tambahkan Anggota</button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
+                    <!-- Column -->
                 </div>
+                <!-- Row -->
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->

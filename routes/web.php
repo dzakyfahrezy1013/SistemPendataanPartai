@@ -41,3 +41,9 @@ Route::get('/dashboard', function () {
 Route::get('/userprofile', function () {
     return view('user.profile');
 });
+Route::get('/inputanggota', function () {
+    return view('user.inputanggota');
+});
+Route::get('/kelolaanggota', function () {
+    return view('user.kelolaanggota');
+});
